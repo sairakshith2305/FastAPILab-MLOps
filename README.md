@@ -1,6 +1,6 @@
 # Breast Cancer Prediction API
 
-A FastAPI-based machine learning application that predicts whether a breast tumor is **malignant(=0)** or **benign(=1)** using Logistic Regression.
+A FastAPI-based machine learning application that predicts whether a breast tumor is **malignant** or **benign** using Logistic Regression.
 
 ## Dataset
 
@@ -39,8 +39,3 @@ Returns prediction, diagnosis, and probability scores of malignant and beingn.
 - **Training Time:** < 1 minute on CPU
 - **Expected Accuracy:** ~95-97%
 
-## Notes
-
-- Feature scaling is applied using StandardScaler (required for Logistic Regression)
-- Both the model and scaler are saved and loaded during predictison
-- The model predicts: 0 = Malignant (cancerous), 1 = Benign (non-cancerous)
