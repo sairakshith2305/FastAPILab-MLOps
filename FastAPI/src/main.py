@@ -54,7 +54,6 @@ async def health_ping():
 @app.post("/predict", response_model=PredictionResponse)
 async def predict_breast_cancer(features: BreastCancerData):
     try:
-        # Convert features to list in the correct order
         feature_list = [[
             features.mean_radius, features.mean_texture, features.mean_perimeter,
             features.mean_area, features.mean_smoothness, features.mean_compactness,
@@ -82,7 +81,6 @@ async def predict_breast_cancer(features: BreastCancerData):
 @app.post("/predict-proba", response_model=ProbabilityResponse)
 async def predict_with_probability(features: BreastCancerData):
     try:
-        # Convert features to list in the correct order
         feature_list = [[
             features.mean_radius, features.mean_texture, features.mean_perimeter,
             features.mean_area, features.mean_smoothness, features.mean_compactness,
